@@ -15,7 +15,7 @@ namespace Projects
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection instructor = new SqlConnection();
-            instructor.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True";
+            instructor.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
 
             instructor.Open();
 
@@ -30,7 +30,7 @@ namespace Projects
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection ins = new SqlConnection();
-            ins.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True" ;
+            ins.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
 
             ins.Open();
 

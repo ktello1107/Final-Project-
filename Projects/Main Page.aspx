@@ -35,6 +35,7 @@
         <br />
         <br />
         <br />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Logout" />
         <br />
         <br />
         <br />
