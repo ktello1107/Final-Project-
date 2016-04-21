@@ -12,11 +12,13 @@ namespace Projects
 {
     public partial class Login : System.Web.UI.Page
     {
+        string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection login = new SqlConnection();
-            login.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename= C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True";
-            
+            login.ConnectionString = db;
+
             login.Open();
 
             
@@ -26,7 +28,7 @@ namespace Projects
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection login = new SqlConnection();
-            login.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename= C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True";
+            login.ConnectionString = db;
 
             login.Open();
 

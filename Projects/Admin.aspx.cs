@@ -12,10 +12,13 @@ namespace Projects
 {
     public partial class Admin : System.Web.UI.Page
     {
+        string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True";
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection instructor = new SqlConnection();
-            instructor.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
+            instructor.ConnectionString = db;
 
             instructor.Open();
 
@@ -30,7 +33,7 @@ namespace Projects
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection ins = new SqlConnection();
-            ins.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
+            ins.ConnectionString = db;
 
             ins.Open();
 
@@ -43,22 +46,27 @@ namespace Projects
           ins.Close();
 
 
-          Label1.Text = "You have successfully created " + TextBox6.Text;
+          Label1.Text = "You have successfully created " + TextBox6.Text + " Click on Go to Main Page. ";
 
-            //if ()
-           // {
-               // Response.Redirect("Login.aspx?");
-           // }
-            
-            //else
-            //{           
-             //   Label1.Text = "Please try agian " ; 
-            //}
+          TextBox2.Text = " ";
+          TextBox3.Text = " ";
+          TextBox6.Text = " ";
+          TextBox7.Text = " ";
+          TextBox4.Text = " ";
+
+
+          
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx?");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("main page.aspx?");
         }
 
     }

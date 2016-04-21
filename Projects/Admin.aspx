@@ -47,6 +47,11 @@
         <asp:Label ID="Label1" runat="server"></asp:Label>
         <br />
         <br />
+        <br />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Go To Main Page" />
+        <br />
+        <br />
+        <br />
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Logout" />
     
     </div>

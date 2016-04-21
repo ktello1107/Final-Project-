@@ -26,7 +26,7 @@
 
         <br />
         <br />
-        Update Student Information&nbsp;
+        Enter Attendance Information&nbsp;
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Enter Here" />
         <br />
         <br />

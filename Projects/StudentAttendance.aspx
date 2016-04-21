@@ -16,13 +16,13 @@
         <br />
         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
         <br />
-        <strong>Hour:</strong>
-        <asp:DropDownList ID="DropDownList1" runat="server">
-            <asp:ListItem></asp:ListItem>
-            <asp:ListItem>Period 1</asp:ListItem>
-            <asp:ListItem>Period 2</asp:ListItem>
-            <asp:ListItem>Period 3</asp:ListItem>
-        </asp:DropDownList>
+        <strong>
+        <br />
+        Teacher ID:
+        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        Hour:</strong><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         <br />
         <br />
         <strong>Subject Code:<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
@@ -34,15 +34,11 @@
         <br />
         <br />
         Attendence:&nbsp;
-        <asp:DropDownList ID="DropDownList2" runat="server">
-            <asp:ListItem></asp:ListItem>
-            <asp:ListItem>Present</asp:ListItem>
-            <asp:ListItem>Absent</asp:ListItem>
-        </asp:DropDownList>
         </strong>
+        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Submit" />
+        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button4" runat="server" Text="Delete" />
         <br />
