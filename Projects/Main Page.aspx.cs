@@ -23,5 +23,11 @@ namespace Projects
         {
             Response.Redirect("Student Info.aspx?");
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx?");
+
+        }
     }
 }

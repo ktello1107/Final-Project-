@@ -23,3 +23,8 @@ C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.
 C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\obj\Debug\Projects.csprojResolveAssemblyReference.cache
 C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\obj\Debug\Projects.dll
 C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\obj\Debug\Projects.pdb
+C:\Users\King Kong\Documents\Visual Studio 2012\Projects\Projects_vs.1.4\Projects\bin\Projects.dll
+C:\Users\King Kong\Documents\Visual Studio 2012\Projects\Projects_vs.1.4\Projects\bin\Projects.pdb
+C:\Users\King Kong\Documents\Visual Studio 2012\Projects\Projects_vs.1.4\Projects\obj\Debug\Projects.csprojResolveAssemblyReference.cache
+C:\Users\King Kong\Documents\Visual Studio 2012\Projects\Projects_vs.1.4\Projects\obj\Debug\Projects.dll
+C:\Users\King Kong\Documents\Visual Studio 2012\Projects\Projects_vs.1.4\Projects\obj\Debug\Projects.pdb

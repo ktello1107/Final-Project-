@@ -15,7 +15,7 @@ namespace Projects
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection login = new SqlConnection();
-            login.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename= C:\USERS\K.TELLO\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\FINAL PROJECTS\VERSION 1.3\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True";
+            login.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename= C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True";
             
             login.Open();
 
@@ -26,7 +26,7 @@ namespace Projects
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection login = new SqlConnection();
-            login.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename= C:\USERS\K.TELLO\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\FINAL PROJECTS\VERSION 1.3\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True";
+            login.ConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename= C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\PROJECTS_VS.1.4\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True";
 
             login.Open();
 
