@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        Please Enter Student Information<br />
+        <strong>Please Enter Student Information</strong><br />
         <br />
         <br />
         Student Roll Number: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -44,8 +44,16 @@
         <asp:TextBox ID="TextBox8" runat="server" Rows="5" TextMode="MultiLine"></asp:TextBox>
         <br />
         <br />
+        <asp:Label ID="Label1" runat="server"></asp:Label>
+        <br />
         <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
+        <br />
+        <br />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Go To Main Page" />
+        <br />
+        <br />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Logout" Height="39px" />
         <br />
     
     </div>

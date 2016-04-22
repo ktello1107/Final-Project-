@@ -19,7 +19,7 @@
         <span class="auto-style1"><strong>New Teacher Login</strong></span><br />
         <br />
         <strong>ID:
-        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <br />
         <br />
         Subject Code:</strong>
@@ -27,16 +27,16 @@
         <br />
         <br />
         <strong>Subject Name:</strong>
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         <br />
         <br />
         <strong>Teacher Name:</strong>
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         <br />
         <strong>
         <br />
         Password:
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
         <br />
         </strong>
         <br />
@@ -47,7 +47,11 @@
         <asp:Label ID="Label1" runat="server"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Logout" />
+        <br />
+        <asp:Button ID="Button2" runat="server" OnClick="Button3_Click" Text="Go To Login" />
+        <br />
+        <br />
+        <br />
     
     </div>
     </form>
