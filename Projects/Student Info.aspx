@@ -53,6 +53,9 @@
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Go To Main Page" />
         <br />
         <br />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Calculate" />
+        <br />
+        <br />
         <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Logout" Height="39px" />
         <br />
     
