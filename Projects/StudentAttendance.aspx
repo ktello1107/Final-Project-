@@ -18,29 +18,39 @@
         <br />
         <strong>
         <br />
-        Teacher ID:
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+        <br />
+        Hour:</strong><asp:DropDownList ID="HourList" runat="server">
+            <asp:ListItem Value="1">1st Hour</asp:ListItem>
+            <asp:ListItem Value="2">2nd Hour</asp:ListItem>
+            <asp:ListItem Value="3">3rd Hour</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br />
-        Hour:</strong><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <strong>Subject Code:<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <strong>Subject Code:<asp:DropDownList ID="SubjectCode" runat="server" DataSourceID="SqlDataSource2" DataTextField="Ssname" DataValueField="Scode">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Scode], [Ssname] FROM [Subject]"></asp:SqlDataSource>
         <br />
         </strong>
         <br />
-        <strong>Student Roll Number:&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <strong>Select Student:&nbsp;
+        <asp:DropDownList ID="StudentRollNo" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="RollNo">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [RollNo], [Name] FROM [Student_Information]"></asp:SqlDataSource>
         <br />
         <br />
         Attendence:&nbsp;
         </strong>
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="Attendence" runat="server">
+            <asp:ListItem>Absent</asp:ListItem>
+            <asp:ListItem>Present</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+        <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Button1_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button4" runat="server" Text="Delete" />
+        <asp:Button ID="Delete" runat="server" Text="Delete" />
+        &nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Update" runat="server" Text="Update" />
         <br />
         <br />
         <asp:Label ID="Label1" runat="server"></asp:Label>
@@ -48,9 +58,9 @@
         <br />
     
     </div>
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Logout" />
+        <asp:Button ID="Logout" runat="server" OnClick="Button2_Click" Text="Logout" />
     &nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Return to Main" OnClick="Button3_Click" />
+        <asp:Button ID="Main" runat="server" Text="Return to Main" OnClick="Button3_Click" />
         <br />
         <br />
         <br />
