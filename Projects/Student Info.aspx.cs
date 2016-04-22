@@ -37,23 +37,40 @@ namespace Projects
 
             student.Open();
 
-           SqlCommand command = new SqlCommand ("SELECT * FROM Student_Information WHERE RollNo = '" + TextBox1.Text + "'", student);
+           SqlCommand command = new SqlCommand("SELECT * from Student_Information " , student);
            SqlDataReader reader = command.ExecuteReader();
-            reader.Read();
 
-            if (reader["RollNo"] != null)
-            {
-               Label1.Text = "Student exists. Please try again!";
-               student.Close();
-               return;
-            }
-            
-                SqlCommand command1 = new SqlCommand("INSERT INTO Student_Information (RollNo, Name, Department, DOB, Address, MNo, EID, Notes) VALUES ('" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + TextBox3.Text + "', '" + TextBox4.Text + "', '" + TextBox5.Text + "', '" + TextBox6.Text + "', '" + TextBox7.Text + "', '" + TextBox8.Text + "')", student);
-                command1.ExecuteNonQuery();
+           Label1.Text = " ";
+           while (reader.Read())
+           {
+               Label1.Text = Label1.Text + reader["RollNo"] +  "" + "<br/>" ;
+               
+           }
+           student.Close();
+            //if (reader["RollNo"] != null)
+          // {
+               //Label1.Text = "Student exists. Please try again!";
+              //student.Close();
+              // return;
+            //}
 
-                Label1.Text = student.State.ToString();
+            //else if (reader["RollNo"] == null)
+            //{
+               // Label1.Text = "Please enter in RollNo";
+               // student.Close();
+                //return;
+            //}
 
-                student.Close();
+           // else
+            //{
+
+                //SqlCommand command1 = new SqlCommand("INSERT INTO Student_Information (RollNo, Name, Department, DOB, Address, MNo, EID, Notes) VALUES ('" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + TextBox3.Text + "', '" + TextBox4.Text + "', '" + TextBox5.Text + "', '" + TextBox6.Text + "', '" + TextBox7.Text + "', '" + TextBox8.Text + "')", student);
+                //command1.ExecuteNonQuery();
+
+               // Label1.Text = "You have succesffuly entered in a new student";
+
+                //student.Close();
+        //}
             
             }
 
