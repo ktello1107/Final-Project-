@@ -54,7 +54,7 @@ namespace Projects
             SqlCommand command = new SqlCommand("INSERT INTO Attendance (Date, Hour,Scode,RollNo,Attendance) VALUES ('" + Calendar1.SelectedDate + "', '" + HourList.SelectedValue + "', '" + SubjectCode.SelectedValue +"','" + StudentRollNo.SelectedValue + "', '" + Attendence.SelectedValue + "' )", attendance);
             command.ExecuteNonQuery();
 
-            Label1.Text = "You have successfully updated the Attendance information for Student: " + StudentRollNo;
+            Label1.Text = "You have successfully updated the Attendance information for Student: " + StudentRollNo.SelectedItem;
 
             attendance.Close();
 

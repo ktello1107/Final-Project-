@@ -35,7 +35,7 @@
         <strong>Select Student:&nbsp;
         <asp:DropDownList ID="StudentRollNo" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="RollNo">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [RollNo], [Name] FROM [Student_Information]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [RollNo], [Name] FROM [StudentInformation]"></asp:SqlDataSource>
         <br />
         <br />
         Attendence:&nbsp;
