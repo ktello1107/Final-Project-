@@ -37,41 +37,36 @@ namespace Projects
 
             student.Open();
 
-           SqlCommand command = new SqlCommand("SELECT * from Student_Information " , student);
+           SqlCommand command = new SqlCommand("SELECT * from Student_Information WHERE RollNo = '" + TextBox1.Text + "'" , student);
            SqlDataReader reader = command.ExecuteReader();
+           var hasresult = reader.Read();
 
-           Label1.Text = " ";
-           while (reader.Read())
+           if (hasresult == false)
            {
-               Label1.Text = Label1.Text + reader["RollNo"] +  "" + "<br/>" ;
-               
+               SqlCommand command1 = new SqlCommand("INSERT INTO Student_Information (RollNo, Name, Department, DOB, Address, MNo, EID, Notes) VALUES ('" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + TextBox3.Text + "', '" + TextBox4.Text + "', '" + TextBox5.Text + "', '" + TextBox6.Text + "', '" + TextBox7.Text + "', '" + TextBox8.Text + "')", student);
+               command1.ExecuteNonQuery();
+
+               Label1.Text = "You have succesfully entered in a new student";
+
+               student.Close();
            }
-           student.Close();
-            //if (reader["RollNo"] != null)
-          // {
-               //Label1.Text = "Student exists. Please try again!";
-              //student.Close();
-              // return;
-            //}
 
-            //else if (reader["RollNo"] == null)
-            //{
-               // Label1.Text = "Please enter in RollNo";
-               // student.Close();
-                //return;
-            //}
+           else if (reader["RollNo"] != null)
+           {
+               Label1.Text = "Student exists. Please try again!";
+               student.Close();
+               return;
+           }
 
-           // else
-            //{
+            else if (reader["RollNo"] == null)
+           {
+               Label1.Text = "Please enter in RollNo";
+               student.Close();
+               return;
+            }
 
-                //SqlCommand command1 = new SqlCommand("INSERT INTO Student_Information (RollNo, Name, Department, DOB, Address, MNo, EID, Notes) VALUES ('" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + TextBox3.Text + "', '" + TextBox4.Text + "', '" + TextBox5.Text + "', '" + TextBox6.Text + "', '" + TextBox7.Text + "', '" + TextBox8.Text + "')", student);
-                //command1.ExecuteNonQuery();
-
-               // Label1.Text = "You have succesffuly entered in a new student";
-
-                //student.Close();
-        //}
-            
+          
+                        
             }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -81,11 +76,17 @@ namespace Projects
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            //select attendance from student_information where RollNo = user input
-            // read that into a new list of strings (SqlReader or something)
-            // set that in the ExtraCredit object
 
-            //List<String> attendanceHistory = new List<String>();
+            SqlConnection student = new SqlConnection();
+            student.ConnectionString = db;
+
+            student.Open();
+
+            SqlCommand command = new SqlCommand("SELECT * from Attendance WHERE RollNo = '" + TextBox1.Text + "'", student);
+            SqlDataReader reader = command.ExecuteReader();
+
+            List<String> attendanceHistory = new List<String>();
+
             // read values from the SqlCommand.execute* and add to the attendanceHitory list
 
             //ExtraCredit credit = new ExtraCredit();
