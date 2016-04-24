@@ -20,7 +20,7 @@
         <br />
         <br />
         Hour:</strong><asp:DropDownList ID="HourList" runat="server">
-            <asp:ListItem Value="1">1st Hour</asp:ListItem>
+            <asp:ListItem Value="1" Selected="True">1st Hour</asp:ListItem>
             <asp:ListItem Value="2">2nd Hour</asp:ListItem>
             <asp:ListItem Value="3">3rd Hour</asp:ListItem>
         </asp:DropDownList>
@@ -46,11 +46,11 @@
         </asp:DropDownList>
         <br />
         <br />
-        <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Button1_Click" />
+        <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Delete" runat="server" Text="Delete" />
+        <asp:Button ID="Delete" runat="server" Text="Delete" OnClick="Delete_Click" />
         &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Update" runat="server" Text="Update" />
+        <asp:Button ID="Update" runat="server" Text="Update" OnClick="Update_Click" />
         <br />
         <br />
         <asp:Label ID="Label1" runat="server"></asp:Label>

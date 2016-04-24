@@ -38,7 +38,7 @@ namespace Projects
             Response.Redirect("Main Page.aspx?");
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Submit_Click(object sender, EventArgs e)
         {
             //grab page data
             //insert student info into database
@@ -48,8 +48,7 @@ namespace Projects
 
 
             attendance.Open();
-
-            
+                     
 
             SqlCommand command = new SqlCommand("INSERT INTO Attendance (Date, Hour,Scode,RollNo,Attendance) VALUES ('" + Calendar1.SelectedDate + "', '" + HourList.SelectedValue + "', '" + SubjectCode.SelectedValue +"','" + StudentRollNo.SelectedValue + "', '" + Attendence.SelectedValue + "' )", attendance);
             command.ExecuteNonQuery();
@@ -60,6 +59,34 @@ namespace Projects
 
 
 
+        }
+
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection delete = new SqlConnection();
+            delete.ConnectionString = db;
+
+            delete.Open();
+
+            string deleteStatement = @"DELETE FROM Attendance WHERE RollNo = '" + StudentRollNo.SelectedItem + "'";
+
+            SqlCommand command1 = new SqlCommand(deleteStatement, delete);
+            command1.ExecuteNonQuery();
+
+            Label1.Text = "Deleted User";
+
+            delete.Close();
+
+        }
+
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            SqlConnection update = new SqlConnection();
+            update.ConnectionString = db;
+
+            update.Open();
+            
         }
     }
 }
