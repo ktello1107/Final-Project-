@@ -37,16 +37,25 @@ namespace Projects
 
             student.Open();
 
-           SqlCommand command = new SqlCommand("SELECT * from Student_Information WHERE RollNo = '" + TextBox1.Text + "'" , student);
+           SqlCommand command = new SqlCommand("SELECT * from StudentInformation WHERE RollNo = '" + TextBox1.Text + "'" , student);
            SqlDataReader reader = command.ExecuteReader();
            var hasresult = reader.Read();
 
            if (hasresult == false)
            {
-               SqlCommand command1 = new SqlCommand("INSERT INTO Student_Information (RollNo, Name, Department, DOB, Address, MNo, EID, Notes) VALUES ('" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + TextBox3.Text + "', '" + TextBox4.Text + "', '" + TextBox5.Text + "', '" + TextBox6.Text + "', '" + TextBox7.Text + "', '" + TextBox8.Text + "')", student);
+               SqlCommand command1 = new SqlCommand("INSERT INTO StudentInformation (RollNo, Name, Department, DOB, Address, MNo, EID, Notes) VALUES ('" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + TextBox3.Text + "', '" + TextBox4.Text + "', '" + TextBox5.Text + "', '" + TextBox6.Text + "', '" + TextBox7.Text + "', '" + TextBox8.Text + "')", student);
                command1.ExecuteNonQuery();
 
                Label1.Text = "You have succesfully entered in a new student";
+
+               TextBox1.Text = " ";
+               TextBox2.Text = " ";
+               TextBox3.Text = " ";
+               TextBox4.Text = " ";
+               TextBox5.Text = " ";
+               TextBox6.Text = " ";
+               TextBox7.Text = " ";
+               TextBox8.Text = " ";
 
                student.Close();
            }
@@ -54,6 +63,15 @@ namespace Projects
            else if (reader["RollNo"] != null)
            {
                Label1.Text = "Student exists. Please try again!";
+               TextBox1.Text = " ";
+               TextBox2.Text = " ";
+               TextBox3.Text = " ";
+               TextBox4.Text = " ";
+               TextBox5.Text = " ";
+               TextBox6.Text = " ";
+               TextBox7.Text = " ";
+               TextBox8.Text = " ";
+
                student.Close();
                return;
            }
@@ -61,6 +79,15 @@ namespace Projects
             else if (reader["RollNo"] == null)
            {
                Label1.Text = "Please enter in RollNo";
+
+               TextBox1.Text = " ";
+               TextBox2.Text = " ";
+               TextBox3.Text = " ";
+               TextBox4.Text = " ";
+               TextBox5.Text = " ";
+               TextBox6.Text = " ";
+               TextBox7.Text = " ";
+               TextBox8.Text = " ";
                student.Close();
                return;
             }
