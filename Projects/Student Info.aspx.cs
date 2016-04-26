@@ -29,7 +29,7 @@ namespace Projects
 
             student.Close();
         }
-
+        //submit button
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection student = new SqlConnection();
@@ -96,11 +96,13 @@ namespace Projects
                         
             }
 
+        //go to main page button
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("main page.aspx?");
         }
 
+        //calculate button
         protected void Button4_Click(object sender, EventArgs e)
         {
 
@@ -118,6 +120,7 @@ namespace Projects
             
         }
 
+        //logout button to take you back to login page
         protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("login.aspx?");
