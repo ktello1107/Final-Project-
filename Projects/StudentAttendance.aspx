@@ -15,11 +15,11 @@
         Date:</strong>
         <br />
         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        <strong>&nbsp;<br />
+        * <em>Only enter in Attendance ID if making updates to a student that is already in the system:<br />
         <br />
-        <strong>
-        <br />
-        ID:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        Attendance ID: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        </em>
         <br />
         <br />
         Hour:</strong><asp:DropDownList ID="HourList" runat="server">
@@ -40,9 +40,10 @@
         </asp:DropDownList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [RollNo], [Name] FROM [StudentInformation]"></asp:SqlDataSource>
         <br />
-        <br />
-        Attendence:&nbsp;
         </strong>
+        <br />
+        <strong>
+        Attendence:<em>&nbsp;
         <asp:DropDownList ID="Attendence" runat="server">
             <asp:ListItem>Absent</asp:ListItem>
             <asp:ListItem>Present</asp:ListItem>
@@ -53,6 +54,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Update" runat="server" Text="Update" OnClick="Update_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Delete" runat="server" Text="Delete " OnClick="Delete_Click" />
+        </em></strong>
         <br />
         <br />
         <asp:Label ID="Label1" runat="server"></asp:Label>
