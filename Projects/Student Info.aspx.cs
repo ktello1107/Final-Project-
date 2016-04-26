@@ -14,8 +14,8 @@ namespace Projects
     public partial class Student_Info : System.Web.UI.Page
     {
         // delete the // from your db and put the // in front of my db
-        //string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True";
-        string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\FINAL PROJECT\FINAL-PROJECT-\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
+        string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True";
+        //string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\FINAL PROJECT\FINAL-PROJECT-\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -112,13 +112,10 @@ namespace Projects
             SqlCommand command = new SqlCommand("SELECT * from Attendance WHERE RollNo = '" + TextBox1.Text + "'", student);
             SqlDataReader reader = command.ExecuteReader();
 
-            List<String> attendanceHistory = new List<String>();
-
-            // read values from the SqlCommand.execute* and add to the attendanceHitory list
-
-            //ExtraCredit credit = new ExtraCredit();
-            //credit.history = 
-            //int bonus = credit.calculate;
+            
+            ExtraCredit credit = new ExtraCredit();
+            
+            
         }
 
         protected void Button3_Click(object sender, EventArgs e)

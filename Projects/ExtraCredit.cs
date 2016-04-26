@@ -8,11 +8,11 @@ namespace Projects
     public class ExtraCredit
     {
         
-        public static int calculate(float numberofdays, float numberofabsences)
+        public static int calculate(float numberofpresent, float numberofabsences)
         {
            
                 
-                float percentage = numberofabsences/numberofdays;
+                float percentage = numberofabsences/numberofpresent;
                 if (percentage >= 0.9)
                 {
                     return 10;

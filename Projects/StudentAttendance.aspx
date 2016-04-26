@@ -16,6 +16,7 @@
         <br />
         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
         <br />
+        <asp:HiddenField ID="AttendanceID" runat="server" />
         <strong>
         <br />
         <br />
@@ -48,7 +49,6 @@
         <br />
         <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Delete" runat="server" Text="Delete" OnClick="Delete_Click" />
         &nbsp;&nbsp;&nbsp;
         <asp:Button ID="Update" runat="server" Text="Update" OnClick="Update_Click" />
         <br />
@@ -61,6 +61,16 @@
         <asp:Button ID="Logout" runat="server" OnClick="Button2_Click" Text="Logout" />
     &nbsp;
         <asp:Button ID="Main" runat="server" Text="Return to Main" OnClick="Button3_Click" />
+        &nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Delete" runat="server" Text="Delete Recent Student" OnClick="Delete_Click" />
+        <br />
+        <br />
+        <asp:DropDownList ID="SelectedAttendance" runat="server" DataSourceID="SqlDataSource3" DataTextField="Id" DataValueField="Id">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Id], [Attendance] FROM [Attendance]"></asp:SqlDataSource>
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Delete" />
+        <br />
         <br />
         <br />
         <br />
