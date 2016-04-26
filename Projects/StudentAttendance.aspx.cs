@@ -15,8 +15,8 @@ namespace Projects
     public partial class InstructorPage : System.Web.UI.Page
     {
         // delete the // from your db and put the // in front of my db
-        //string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True";
-        string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\FINAL PROJECT\FINAL-PROJECT-\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
+        string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\Users\k.tello\Documents\Visual Studio 2012\Projects\Final Projects\Version 1.3\Projects\App_Data\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True";
+        //string db = @"Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\USERS\KING KONG\DOCUMENTS\VISUAL STUDIO 2012\PROJECTS\FINAL PROJECT\FINAL-PROJECT-\PROJECTS\APP_DATA\DATABASE1.MDF;Integrated Security=True;MultipleActiveResultSets=True";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -71,16 +71,9 @@ namespace Projects
 
             SqlCommand command = new SqlCommand("INSERT INTO Attendance (Date, Hour,Scode,RollNo,Attendance) VALUES ('" + Calendar1.SelectedDate + "', '" + HourList.SelectedValue + "', '" + SubjectCode.SelectedValue +"','" + StudentRollNo.SelectedValue + "', '" + Attendence.SelectedValue + "' )", attendance);
             command.ExecuteNonQuery();
-<<<<<<< HEAD
-            command.CommandText = "SELECT SCOPE_IDENTITY()";
-            object lastId = command.ExecuteScalar();
 
-            AttendanceID.Value = lastId.ToString();
-
-=======
             
->>>>>>> origin/master
-            Label1.Text = "You have successfully updated the Attendance information for Student: " + StudentRollNo.SelectedItem;
+            Label1.Text = "You have successfully entered the Attendance information for Student: " + StudentRollNo.SelectedItem;
             
             attendance.Close();
 
@@ -97,12 +90,7 @@ namespace Projects
 
             delete.Open();
 
-<<<<<<< HEAD
-            string deleteStatement = @"DELETE FROM Attendance WHERE ID = '" + AttendanceID.Value + "'";
 
-            SqlCommand command1 = new SqlCommand(deleteStatement, delete);
-            command1.ExecuteNonQuery();
-=======
             // Check if record actually deleted, get the ID first
             string selectStatement = @"select id from  Attendance where Date = '" + Calendar1.SelectedDate +
                  "' and hour = '" + HourList.SelectedValue +
@@ -156,7 +144,7 @@ namespace Projects
             {
                 Label1.Text = StudentRollNo.SelectedItem + " was NOT Deleted";
             }
->>>>>>> origin/master
+
 
 
             
@@ -172,7 +160,6 @@ namespace Projects
 
             update.Open();
 
-<<<<<<< HEAD
             string updateStatement = @"UPDATE Attendance SET Attendance = '" + Attendence.SelectedValue + "' WHERE Scode = '" + StudentRollNo.SelectedValue + "'";
 
             SqlCommand command2 = new SqlCommand(updateStatement, update);
@@ -201,16 +188,9 @@ namespace Projects
             Label1.Text = "Deleted User";
 
             delete.Close();
-=======
-            string updateStatement = @"UPDATE Attendance set (Date='" + Calendar1.SelectedDate + "', Hour='" + HourList.SelectedValue + "', Scode='" + SubjectCode.SelectedValue +"', RollNo='" + StudentRollNo.SelectedValue + "', Attendence='" + Attendence.SelectedValue + "' ; ";
-            
-            SqlCommand command1 = new SqlCommand(updateStatement, update);
-            command1.ExecuteNonQuery();
 
-            Label1.Text = "Updated User";
+  
 
-            update.Close();
->>>>>>> origin/master
         }
     }
 }
