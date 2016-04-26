@@ -66,11 +66,16 @@
         &nbsp;&nbsp;&nbsp;
         <br />
         <br />
+        <strong>Select which Attendance ID you would like to Delete:&nbsp;&nbsp;&nbsp;
         <asp:DropDownList ID="SelectedAttendance" runat="server" DataSourceID="SqlDataSource3" DataTextField="Id" DataValueField="Id">
         </asp:DropDownList>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Delete" />
+        </strong>
+        <br />
+        <br />
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Id], [Attendance] FROM [Attendance]"></asp:SqlDataSource>
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Delete" />
         <br />
         <br />
         <br />

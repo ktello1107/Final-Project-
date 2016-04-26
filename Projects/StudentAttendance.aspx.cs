@@ -153,6 +153,7 @@ namespace Projects
 
         }
 
+        //Update Button
         protected void Update_Click(object sender, EventArgs e)
         {
             SqlConnection update = new SqlConnection();
@@ -160,7 +161,7 @@ namespace Projects
 
             update.Open();
 
-            string updateStatement = @"UPDATE Attendance SET Attendance = '" + Attendence.SelectedValue + "' WHERE Scode = '" + StudentRollNo.SelectedValue + "'";
+            string updateStatement = @"UPDATE Attendance SET Date = '" + Calendar1.SelectedDate + "' WHERE Id = '" + TextBox1.Text + "'";
 
             SqlCommand command2 = new SqlCommand(updateStatement, update);
             command2.ExecuteNonQuery();
@@ -173,6 +174,7 @@ namespace Projects
             
         }
 
+        //Delete Attendance ID record
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection delete = new SqlConnection();
