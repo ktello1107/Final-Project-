@@ -161,12 +161,12 @@ namespace Projects
 
             update.Open();
 
-            string updateStatement = @"UPDATE Attendance SET Date = '" + Calendar1.SelectedDate + "', Hour = '" + HourList.SelectedValue + "', Attendance = '" + Attendence.SelectedValue + "' WHERE Id = '" + TextBox1.Text + "'";
+            string updateStatement = @"UPDATE Attendance SET Date = '" + Calendar1.SelectedDate + "', Hour = '" + HourList.SelectedValue + "', Attendance = '" + Attendence.SelectedValue + "' WHERE RollNo = '" + StudentRollNo.SelectedValue + "'";
                        
             SqlCommand command2 = new SqlCommand(updateStatement, update);
             command2.ExecuteNonQuery();
 
-            Label1.Text = "Updated Student" + StudentRollNo.SelectedValue;
+            Label1.Text = "Updated Student " + StudentRollNo.SelectedItem;
 
             update.Close();
             

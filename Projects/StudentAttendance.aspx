@@ -16,11 +16,6 @@
         <br />
         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
         <strong>&nbsp;<br />
-        * <em>Only enter in Attendance ID if making updates to a student that is already in the system:<br />
-        <br />
-        Attendance ID: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        </em>
-        <br />
         <br />
         Hour:</strong><asp:DropDownList ID="HourList" runat="server">
             <asp:ListItem Value="1" Selected="True">1st Hour</asp:ListItem>

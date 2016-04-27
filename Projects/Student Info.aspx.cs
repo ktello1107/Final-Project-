@@ -102,7 +102,7 @@ namespace Projects
             Response.Redirect("main page.aspx?");
         }
 
-        //calculate button
+        //calculate button * couldn't get this to work
         protected void Button4_Click(object sender, EventArgs e)
         {
 
