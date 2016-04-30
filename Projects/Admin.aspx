@@ -48,7 +48,7 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="Button2" runat="server" OnClick="Button3_Click" Text="Go To Login" />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Go To Login" />
         <br />
         <br />
         <br />
